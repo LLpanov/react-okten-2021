@@ -1,21 +1,13 @@
+import React from 'react';
+
 import './App.css';
-import Users from "./components/Users/Users";
-import Posts from "./components/Posts/Posts";
-import Comments from "./components/Comments/Comments";
 
-
-function App() {
-
+const App = () => {
     return (
-        <div className={'App'}>
-
-            <Users/>
-            <Posts/>
-            <Comments/>
+        <div>
 
         </div>
     );
-}
+};
 
 export default App;
-
