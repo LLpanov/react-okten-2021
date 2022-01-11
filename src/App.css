@@ -1,29 +1,38 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.users {
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.App {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    column-gap: 5px
+
+}
+
+.WrapUser,
+.WrapPost {
+    display: flex;
     background: lightskyblue;
-    width: 50%;
+    width: 49%;
+    height: 30%;
+    overflow: scroll;
 
 }
-.comment{
+
+.WrapComment {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    background:mistyrose;
+    width: 100%;
+    height: 30%;
+    background: mistyrose;
+    overflow: scroll;
 }
-.posts{
-    width: 50%;
-    background: darkseagreen;
-    display: flex;
-    flex-direction: column;
-}
-.global{
-display: flex;
-flex-direction: column;
 
-
-}
