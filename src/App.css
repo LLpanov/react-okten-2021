@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid 1px black;
+}
+img{
+    width: 150px;
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 10px 10px;
+
+}
