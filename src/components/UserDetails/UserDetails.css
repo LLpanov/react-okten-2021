@@ -1,0 +1,34 @@
+.DetailWrap {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background: lightgrey;
+    border: black solid 1px;
+    border-left: none;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+
+
+}
+
+.DetailWrap button {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+.DetailWrap button:hover{
+    background: wheat;
+    transition: 0.3s;
+}
+
+.DetailWrap h3 {
+    width: 100%;
+    text-align: center;
+}
+

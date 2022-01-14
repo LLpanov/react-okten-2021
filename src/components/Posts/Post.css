@@ -1,0 +1,15 @@
+.WrapPost {
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border: solid black .8px;
+
+}
+.EnterPost{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background: bisque;
+    border:solid black 1px;
+}
