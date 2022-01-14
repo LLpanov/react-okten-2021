@@ -20,9 +20,9 @@
     align-items: center;
 
 
-
 }
-.DetailWrap button:hover{
+
+.DetailWrap button:hover {
     background: wheat;
     transition: 0.3s;
 }

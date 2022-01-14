@@ -21,7 +21,7 @@ const Users = () => {
         setUser(singleUser)
     }
     const getUserId = (id) => {
-      setUserId(id)
+        setUserId(id)
     }
 
     return (
@@ -32,10 +32,10 @@ const Users = () => {
                 }
             </div>
 
-          <UserDetail user={user} getUserId={getUserId}/>
+            <UserDetail user={user} getUserId={getUserId}/>
 
 
-            <div className={'WrapPost'}> <Posts userId={userId}/></div>
+            <div className={'WrapPost'}><Posts userId={userId}/></div>
         </div>
     );
 }

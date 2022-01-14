@@ -16,7 +16,7 @@ const Posts = ({userId}) => {
 
 
             {
-                posts.map(value => <Post key={value.id} title={value.title} body={value.body}/>)
+                posts.map(value => <Post key={value.id} userId={value.userId} title={value.title} body={value.body}/>)
             }
 
         </>
