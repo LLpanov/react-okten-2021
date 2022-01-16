@@ -5,44 +5,41 @@ import Form from "./components/Form/Form";
 import Users from "./components/Users/Users";
 import {userService} from "./services/user.service";
 
+
 const App = () => {
-
     const [users, setUsers] = useState([]);
-    const [filterUsers, setfilerUsers] = useState([]);
+    const [filterUsers, setFilterUsers] = useState([]);
 
 
-    useEffect(()=>{
-        userService.getAll().then(value => {
-            setUsers([...value],setfilerUsers([...value]))
-        });
+    useEffect(() => {
+        userService.getAll()
+            .then(value => {
+                setUsers([...value])
+                setFilterUsers([...value]);
 
+            });
 
-
-    },[])
-
-
-
+    }, [])
 
     const getFilter = (data) => {
-        let filterArray = [...users];
+        let filterArr = [...users];
 
-        if (data.name){
-            filterArray =filterArray.filter(users => users.name.toLowerCase().includes(data.name.toLowerCase()))
+        if (data.name) {
+            filterArr = filterArr.filter(user => user.name.includes(data.name));
         }
-        if (data.username){
-            filterArray =filterArray.filter(users => users.username.toLowerCase().includes(data.username.toLowerCase()))
+        if (data.username) {
+            filterArr = filterArr.filter(user => user.username.includes(data.username));
         }
-        if (data.email){
-            filterArray =filterArray.filter(users => users.email.toLowerCase().includes(data.email.toLowerCase()))
+        if (data.email) {
+            filterArr = filterArr.filter(user => user.email.includes(data.email));
         }
-        setfilerUsers(filterArray)
-
-    };
+        setFilterUsers(filterArr);
+    }
 
     return (
         <div>
             <Form getFilter={getFilter}/>
-            <Users users={filterUsers}/>
+            <Users filterUsers={filterUsers}/>
 
         </div>
     );

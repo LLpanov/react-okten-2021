@@ -1,12 +1,17 @@
 import React from 'react';
 
+import './User.css'
+
 const User = ({user}) => {
     return (
-        <div>
-            <h3>{user.id}</h3>
-            <h3>{user.name}</h3>
-            <h3>{user.username}</h3>
-            <h3>{user.email}</h3>
+        <div className={'userWrap'}>
+            <ul>
+                <li>{user.id}</li>
+                <li>{user.name}</li>
+                <li>{user.username}</li>
+                <li>{user.email}</li>
+
+            </ul>
         </div>
     );
 };

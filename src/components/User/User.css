@@ -1,0 +1,14 @@
+.userWrap{
+    background-color: coral;
+    width: 50%
+}
+.UserWraps{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    row-gap: 5px;
+}
+li{
+    font-weight: bold;
+    font-size: larger;
+}

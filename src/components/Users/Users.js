@@ -1,15 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
+
 import User from "../User/User";
+import '../User/User.css'
 
-const Users = ({users}) => {
-
-
-
+const Users = ({filterUsers:users}) => {
     return (
-        <div>
+        <div className={'UserWraps'}>
             {
-                users.map(users => <User key={users.id} user={users} />)
-
+                users.map(users => <User key={users.id} user={users}/>)
             }
         </div>
     );
