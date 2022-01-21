@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
+import {Outlet} from "react-router-dom";
 
 import {userService} from "../../sevices/user.service";
 import Users from "../../components/Users/Users";
 import './UsersPage.css'
-import {Outlet} from "react-router-dom";
 
 const UsersPage = () => {
     const [users, setUsers] = useState([]);

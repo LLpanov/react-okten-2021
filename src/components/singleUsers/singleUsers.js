@@ -1,7 +1,7 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 import './singleUsers.css'
-import {Link} from "react-router-dom";
 
 const SingleUsers = ({users}) => {
     const {id, name, username, email} = users;

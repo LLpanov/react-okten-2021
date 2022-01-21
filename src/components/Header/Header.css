@@ -15,16 +15,15 @@
 
 }
 
-.header a[class='active']{
+.header a[class='active'] {
     color: darkmagenta;
 }
 
-.Outlet{
+.Outlet {
     margin-top: 10px;
     overflow: hidden;
     overflow-y: auto;
     width: 100%;
-
 
 
 }

@@ -1,7 +1,7 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 import "./singlePosts.css"
-import {Link} from "react-router-dom";
 
 const SinglePost = ({post}) => {
     const {id, userId, title, body} = post;

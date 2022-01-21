@@ -10,15 +10,18 @@ const PostCommentsPage = () => {
 
     useEffect(() => {
         commentsService.getById(id).then(value => setComments({...value}))
-    }, [])
+    }, [id])
 
     return (
         <div className={'WrapComments'}>
             {comments &&
-            <div
-                className={'singleComments'}>
-                <p>{comments.name}</p>
-                <p>asddadadasdasdasdasdadsadadasdafsfa</p>
+            <div className={'singleComments'}>
+                <p>PostID:{comments.postId}</p>
+                <p>ID:{comments.id}</p>
+                <p>Name:{comments.name}</p>
+                <p>Email:{comments.email}</p>
+                <p>Body:{comments.body}</p>
+
             </div>}
 
         </div>
