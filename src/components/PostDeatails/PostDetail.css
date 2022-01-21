@@ -1,0 +1,7 @@
+.TargetComments{
+    display: flex;
+    flex-grow: 1;
+    row-gap: 5px;
+    flex-direction: column;
+    /*display: contents;*/
+}

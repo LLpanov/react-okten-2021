@@ -1,0 +1,28 @@
+.WrapSingleUser{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background: cornflowerblue  ;
+    justify-content: space-evenly;
+    padding: 20px;
+
+}
+button{
+    width: 100%;
+    background: coral;
+    height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.WrapSingleUser li{
+    font-size: 20px;
+    font-weight: bold;
+}
+.TargetUsers{
+    flex-grow: 1;
+    row-gap: 5px;
+    display: flex;
+    flex-direction: column;
+
+}

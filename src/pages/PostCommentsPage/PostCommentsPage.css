@@ -1,0 +1,18 @@
+.WrapComments{
+    background: pink;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+.singleComments{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.singleComments {
+    padding: .5rem;
+}
+.singleComments li{
+    font-weight: bold;
+    font-size: 20px;
+}

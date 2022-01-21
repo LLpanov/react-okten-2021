@@ -1,0 +1,32 @@
+.wrapPosts {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    column-gap: 10px;
+    padding: 20px;
+
+
+}
+
+.wrapPosts a {
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    border: black solid .3px
+}
+
+.wrapPosts a:hover {
+    background: snow;
+}
+
+.TargetPosts {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    row-gap: 10px;
+    background: papayawhip;
+}
+

@@ -1,0 +1,30 @@
+.header {
+    min-height: 100px;
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    width: 100%;
+}
+
+.header a {
+    font-size: 30px;
+    color: snow;
+    text-decoration: none;
+
+}
+
+.header a[class='active']{
+    color: darkmagenta;
+}
+
+.Outlet{
+    margin-top: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+
+
+
+}

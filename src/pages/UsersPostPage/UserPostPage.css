@@ -1,0 +1,17 @@
+.PostPage{
+    width: 45vw;
+    padding: .5rem;
+    background: pink;
+    display: flex;
+    flex-direction: column;
+}
+.singlePosts{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.singlePosts li{
+    font-weight: bold;
+    font-size: 20px;
+}
+
