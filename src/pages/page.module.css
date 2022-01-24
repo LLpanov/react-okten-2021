@@ -1,0 +1,250 @@
+.Users {
+    display: flex;
+    column-gap: 5px;
+
+}
+
+.UsersPage {
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    background: coral;
+    width: 50vw;
+    border: solid black .4px;
+}
+
+.WrapUsersPage {
+    display: flex;
+    row-gap: 10px;
+    padding: .6rem;
+    margin-top: 10px;
+    width: 100vw;
+    column-gap: 5px;
+}
+
+.TargetUsers {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.WrapUsersPage button {
+    width: 100%;
+    font-weight: bolder;
+    cursor: pointer;
+    background: lightskyblue;
+}
+
+.SingleUsers {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background: #9EEFE1;
+    width: 50vw;
+    border: solid black .4px;
+    height: fit-content;
+
+}
+
+.SingleUsers p {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.SingleUsers a {
+    width: 50%;
+    background: yellow;
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+
+.User {
+    padding: .6rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.UserPost {
+    display: flex;
+    flex-direction: column;
+    background: green;
+    row-gap: 10px;
+    border: solid black 1px;
+    padding: .6rem;
+
+}
+
+.TargetUsersPostPageP {
+    display: flex;
+}
+
+.AlbumUsers {
+    background: #9EEFE1;
+    padding: .6rem;
+    border: solid black 0.3px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.TargetAlbums {
+    border: solid black .4px;
+    width: 50vw;
+
+}
+
+.AlbumUsers p {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.AlbumUsers button {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.TargetPhoto {
+    margin-left: auto;
+    margin-top: 20px;
+    width: 50vw;
+}
+
+.TargetPhoto img {
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.TargetPhoto > div {
+    background-color: rgba(253, 98, 71, 0.84);
+}
+
+.Photo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: 20px;
+    align-items: center;
+    border: black solid 1px;
+    padding: .3rem;
+    margin-top: 25px;
+}
+
+.Photo image {
+
+}
+
+.Photo p {
+    margin: 3px 2px;
+}
+
+.WrapPostPage {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px 10px;
+    width: 50vw;
+
+}
+
+.PostsPages {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding: .6rem;
+    row-gap: 5px;
+    background: lightskyblue;
+}
+
+.PostsPages p {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.PostsPages button {
+    width: 100%;
+    font-weight: bolder;
+    font-size: 16px;
+    cursor: pointer;
+    background: whitesmoke;
+    height: 30px;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
+}
+
+.PostsPages a :hover {
+    background: lightsalmon;
+}
+
+.WrapPostsDetails {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: .6rem;
+    height: fit-content;
+
+}
+
+.WrapPostsDetails p {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.WrapPostsDetails button {
+    font-size: 18px;
+    font-weight: bolder;
+    height: 30px;
+    width: 100%;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.6);
+
+}
+
+.WrapPostsDetails button:hover {
+    background: yellow;
+    cursor: pointer;
+
+}
+
+.WrapComments {
+    background: lightsalmon;
+    padding: .6rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    border: solid 1px black;
+
+}
+
+.Comments p {
+    font-weight: bolder;
+    font-size: 18px;
+
+}
+
+.Comments {
+    border: solid .4px;
+    padding: .6rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.TargetAllPosts {
+    display: flex;
+    column-gap: 10px;
+}
+
+.PostDet {
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: .6rem;
+    border: solid black .4px;
+}
