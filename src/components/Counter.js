@@ -7,6 +7,7 @@ const reducer = (state, action) => {
     switch (action.type) {
         case 'Inc' :
             return {...state, count1: state.count1 + 1};
+
         case 'Plus' :
             return {...state, count2: state.count2 + 1};
 
