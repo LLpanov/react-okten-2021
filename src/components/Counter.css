@@ -1,0 +1,44 @@
+.HappyTreeFriend {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.One, .Two, .Three {
+    width: 40vw;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 5px;
+    font-size: 20px;
+
+}
+
+.One {
+    background: lightskyblue;
+
+
+}
+
+.Two {
+    background: coral;
+
+}
+
+.Three {
+    background: silver;
+}
+
+button {
+    cursor: pointer;
+    width: 50%;
+    font-weight: bolder;
+    font-size: 16px;
+
+}
