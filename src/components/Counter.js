@@ -42,7 +42,7 @@ const Counter = () => {
     const [state, dispatch] = useReducer(reducer, {count1: 0, count2: 0, count3: 0});
 
     return (
-        <div className={'HappyTreeFriend'}>
+        <div className={'HappyTreeFriends'}>
             <div className={'One'}>
                 <div> Counter: {state.count1}</div>
                 <button onClick={() => dispatch({type: 'Inc'})}>Inc</button>
