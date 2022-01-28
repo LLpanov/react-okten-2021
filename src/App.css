@@ -1,0 +1,42 @@
+.Target{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+}
+.Target label{
+    font-size: 15px;
+    font-weight: bold;
+}
+.Target form{
+    display: flex;
+    column-gap: 10px;
+}
+.Target input {
+    height: 25px;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #cecece;
+    background: #F6F6f6;
+    border-radius: 8px;
+
+}
+.Target button{
+    background: black;
+    color: snow;
+    cursor: pointer;
+    width: 80px;
+
+}
+.animals{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+

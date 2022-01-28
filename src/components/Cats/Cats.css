@@ -1,0 +1,20 @@
+.WrapCats {
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.WrapCats p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.WrapCats button {
+    width: 50%;
+    background: black;
+    border-radius: 5px;
+    color: snow;
+    font-size: 15px;
+    font-weight: bold;
+}

@@ -1,0 +1,20 @@
+.WrapDogs {
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.WrapDogs p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.WrapDogs button {
+    width: 50%;
+    background: black;
+    border-radius: 5px;
+    color: snow;
+    font-size: 15px;
+    font-weight: bold;
+}
