@@ -1,8 +1,11 @@
-const baseUrl = 'https://jsonplaceholder.typicode.com'
+const baseUrl = 'https://loremflickr.com/320/500';
 
 export default baseUrl
+
 export const urls = {
-    users: '/users',
-    posts: '/posts',
-    comments: '/comments'
+    cat: '/cat',
+    car: '/car',
+    dog: '/dog',
+    girl: '/girl',
+    notebook: '/notebook'
 }

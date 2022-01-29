@@ -1,0 +1,39 @@
+.TargetMenu {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+
+}
+
+.TargetMenu button {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    text-shadow: 3px -1px 1px rgba(0, 0, 0, .7);
+    background: #3CB372 linear-gradient(#3CB372, #2E8B57 75%);
+    box-shadow: 0 1px #008B49,
+    inset 0 1px rgba(250, 250, 250, .7),
+    inset 0 0 4px rgba(255, 255, 255, .7),
+    2px 2px 25px rgba(0, 0, 0, .4);
+    transition: 0.3s;
+
+}
+
+button :hover {
+    background: #43CD80 linear-gradient(#43CD80, #008B45 75%);
+}
+
+button:active {
+    background: #43CD80 linear-gradient(#43CD80 10%, #008B45);
+    box-shadow: inset 0 1px rgba(250, 250, 250, .7),
+    inset 0 0 4px rgba(255, 255, 255, .7),
+    0 2px rgb(80, 30, 10),
+    0 1px 6px rgba(0, 0, 0, .9);
+    transform: translate(0, 5px);
+    -webkit-transform: translate(0, 5px);
+}
