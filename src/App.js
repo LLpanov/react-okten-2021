@@ -1,11 +1,13 @@
-import './App.css';
+import "./App.css";
+import {Cars, Form} from "./components";
 
 
 const App = () => {
 
     return (
-        <div>
-
+        <div className={'WrapApp'}>
+            <Form/>
+            <Cars/>
         </div>
     );
 };
