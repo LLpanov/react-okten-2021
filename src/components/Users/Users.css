@@ -1,0 +1,17 @@
+.UsersWrap{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    background-color: lightskyblue;
+    flex-wrap: wrap;
+    width: 30vw;
+    margin-top: 10px;
+    margin-left: 10px;
+
+
+}
+.UsersWrap p{
+    font-size: 15px;
+    font-weight: bold;
+    padding: .5rem;
+}

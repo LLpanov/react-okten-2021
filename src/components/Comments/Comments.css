@@ -1,0 +1,11 @@
+.CommentsWrap {
+    display: flex;
+    flex-direction: column;
+    background-color: lightskyblue;
+    padding: 0.4rem;
+    margin-top: 5px;
+    width: 30vw;
+    height: 200px;
+    margin-left: 10px;
+
+}

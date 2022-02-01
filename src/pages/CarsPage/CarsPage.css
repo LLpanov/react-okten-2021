@@ -1,0 +1,60 @@
+.WrapApp {
+    margin-top: 10px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    margin-left: 10px;
+
+
+}
+
+.WrapApp form {
+    display: flex;
+    column-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+button {
+    font-weight: bold;
+    color: snow;
+    background-color: lightskyblue;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+
+}
+
+input {
+    height: calc(2.25rem + 2px);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 300px;
+    padding-left: 5px;
+
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 29%;
+
+}
+
+.error span {
+    color: red;
+    width: 100%;
+}

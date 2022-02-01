@@ -1,0 +1,23 @@
+.CarWrap {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border: solid black .4px;
+    margin-left: 10px;
+    padding: 0.4rem;
+
+}
+
+.CarWrap button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+
+.CarWrap li {
+    font-weight: bold;
+}
