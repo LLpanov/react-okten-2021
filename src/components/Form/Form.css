@@ -1,0 +1,25 @@
+.WrapFrom {
+    display: flex;
+    column-gap: 5px;
+}
+
+.WrapFrom input {
+    width: 300px;
+    font-size: 13px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #cecece;
+    background: #F6F6f6;
+    border-radius: 8px;
+    height: 35px;
+}
+
+.WrapFrom button {
+    font-weight: bold;
+    background-color: black;
+    color: snow;
+    width: 50%;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+
+}
