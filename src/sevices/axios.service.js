@@ -1,13 +1,10 @@
 import axios from "axios";
-import {baseURL, headers, urls} from "../config";
+import {baseURL, headers} from "../config";
 
 
 
-const axiosService = axios.create({
+export const axiosService = axios.create({
     baseURL,
     headers
 });
 
-export const fetchData = () => {
-    return axiosService.get(urls.movie);
-}

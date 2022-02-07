@@ -1,13 +1,22 @@
+import {Route, Routes} from "react-router-dom";
+
 import './App.css';
-import {fetchData} from "./sevices";
+import {Layout} from "./components";
+import {HomePage} from "./Pages";
 
-
-fetchData().then(console.log )
 const App = () => {
+
 
     return (
         <div>
-            asfasf
+            <Routes>
+                <Route path={'/'} element={<Layout/>}/>
+                <Route  path={'home'} element={<HomePage/>}>
+                </Route>
+
+
+                <Route/>
+            </Routes>
         </div>
     );
 };
