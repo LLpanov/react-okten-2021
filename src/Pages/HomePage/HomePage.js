@@ -1,22 +1,25 @@
-import React, {useEffect, useState} from 'react';
-import {movieService} from "../../sevices";
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from "react-redux";
+
+import {getMovieList} from "../../store";
 import {MovieList} from "../../components";
+import css from './HomePage.module.css'
 
 const HomePage = () => {
-    const [movieList, setMovieList] = useState([]);
+
+    const {movieList} = useSelector(state => state['movieList']);
+    const dispatch = useDispatch();
+
 
     useEffect(() => {
-
-        (async () => {
-            const {data:{results, page, total_pages, total_results}} = await movieService.getAll();
-            setMovieList(results);
-
-        })();
-
+        dispatch(getMovieList())
     }, [])
+
     return (
 
-        <div>
+        <div className={css.Wrap}>
+
+
             {movieList.map(movies => <MovieList key={movies.id} movies={movies}/>)}
 
         </div>

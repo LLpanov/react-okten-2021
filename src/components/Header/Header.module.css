@@ -1,0 +1,20 @@
+.Wrap{
+    display: flex;
+    background-color: black;
+    justify-content: flex-start;
+    column-gap: 20px;
+    height: 80px;
+    align-items: center;
+    padding: .6rem;
+}
+.Wrap h4{
+    color: #fff;
+}
+
+ a{
+    text-decoration: none;
+    color: #fff;
+}
+.Wrap a[class='active']{
+    color : tomato;
+}

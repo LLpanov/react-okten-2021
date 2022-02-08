@@ -1,23 +1,23 @@
 import {Route, Routes} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import './App.css';
+import './index.css';
 import {Layout} from "./components";
-import {HomePage} from "./Pages";
+import {GenrePage, HomePage} from "./Pages";
 
 const App = () => {
 
 
     return (
-        <div>
+        <>
             <Routes>
-                <Route path={'/'} element={<Layout/>}/>
-                <Route  path={'home'} element={<HomePage/>}>
+                <Route path={'/'} element={<Layout/>}>
+                <Route index element={<HomePage/>}/>
+                    <Route path={'genre'} element={<GenrePage/>}/>
+
                 </Route>
-
-
-                <Route/>
             </Routes>
-        </div>
+        </>
     );
 };
 
