@@ -3,6 +3,7 @@ import {genreService, movieService, PaginationService} from "../sevices";
 
 const initialState = {
     movieList: [],
+    movieDetail:[],
     state: null,
     error: null,
     genre: []
@@ -49,6 +50,18 @@ export const Pagination = createAsyncThunk(
         }
 
     });
+export  const getMovie = createAsyncThunk(
+    'moviesSlice/getMovie',
+    async (id,{dispatch})=>{
+        try {
+            const data = await movieService.getById(id);
+            dispatch(setMovieDetails(data))
+        }
+        catch (e) {
+           console.log(e.message)
+        }
+    }
+)
 
 
 const moviesSlice = createSlice({
@@ -62,11 +75,10 @@ const moviesSlice = createSlice({
         setGenre: (state, action) => {
             state.genre = action.payload.genre
         },
-        //
-        // setPage: (state, action) => {
-        //     state.movieList = action.payload
-        //
-        // }
+        setMovieDetails:(state, action) =>{
+            state.movieDetail = action.payload
+        }
+
 
     },
     extraReducers: {
@@ -87,5 +99,5 @@ const moviesSlice = createSlice({
     });
 
 const movieReducer = moviesSlice.reducer;
-export const {setGenre, setPage} = moviesSlice.actions
+export const {setMovieDetails,setGenre, setPage} = moviesSlice.actions
 export default movieReducer;

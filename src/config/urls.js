@@ -6,6 +6,7 @@ const urls = {
 
     movie: '/discover/movie',
     genre: '/genre/movie/list',
+    movieById: '/movie'
 
 
 

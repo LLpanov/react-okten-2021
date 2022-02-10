@@ -1,0 +1,22 @@
+@import "../../styles/color";
+
+.movie-section {
+  display: flex;
+  flex-direction: column;
+  row-gap:5px;
+  justify-content: space-evenly;
+  padding: 40px 0px;
+  color: $font-primary;
+  font-weight: 200;
+}
+.movie-title  h2{
+  font-size: 40px;
+  color: $font-primary;
+}
+.movie-title span{
+  color: gold;
+}
+.movie-plot {
+  margin-top: 20px;
+  line-height: 1.8rem;
+}
