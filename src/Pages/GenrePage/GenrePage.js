@@ -16,7 +16,7 @@ const GenrePage = () => {
     //
     // }, [])
     const {genre} = useSelector(state => state['movieList']);
-     console.log(genre)
+    console.log(genre)
 
     const dispatch = useDispatch();
 
@@ -25,7 +25,7 @@ const GenrePage = () => {
 
         dispatch(getGenre())
 
-    },[])
+    }, [])
 
     return (
         <div>

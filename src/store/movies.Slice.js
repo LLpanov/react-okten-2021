@@ -1,34 +1,55 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {genreService, movieService} from "../sevices";
+import {genreService, movieService, PaginationService} from "../sevices";
 
 const initialState = {
     movieList: [],
     state: null,
     error: null,
-
     genre: []
 }
 
 
 export const getMovieList = createAsyncThunk(
-    'moviesSlice/getMovieList',
-    async (_, {dispatch}) => {
+    'movieSlice/getMovieList',
+    async (_, {rejectWithValue}) => {
+            const movies = await movieService.getAll()
+        try {
+            return movies
+        }
+        catch (e){
+            return rejectWithValue(e.message);
+        }
 
-        const {data: {results, page, total_pages, total_results}} = await movieService.getAll();
-        dispatch(setMovieList({movieList: results}))
 
 
-    });
+    }
+)
 
 export const getGenre = createAsyncThunk(
     'moviesSlice/getGenre',
     async (_, {dispatch}) => {
 
-        const {data:{genres}} = await genreService.getAll()
-        dispatch(setGenre({genre:genres}))
+        const {data: {genres}} = await genreService.getAll()
+        dispatch(setGenre({genre: genres}))
 
 
-    })
+    });
+
+
+export const Pagination = createAsyncThunk(
+    'moviesSlice/Pagination',
+    async (page, {dispatch}) => {
+        try {
+            const newPage = await PaginationService.getPage(page)
+            console.log(page);
+            dispatch(setPage(newPage))
+
+        } catch (e) {
+            console.log(e)
+        }
+
+    });
+
 
 const moviesSlice = createSlice({
     name: 'moviesSlice',
@@ -38,18 +59,33 @@ const moviesSlice = createSlice({
         setMovieList: (state, action) => {
             state.movieList = action.payload.movieList
         },
-        setGenre: (state,action)=>{
-            state.genre =action.payload.genre
-        }
+        setGenre: (state, action) => {
+            state.genre = action.payload.genre
+        },
+        //
+        // setPage: (state, action) => {
+        //     state.movieList = action.payload
+        //
+        // }
 
     },
-    extraReducers:{
+    extraReducers: {
+        [getMovieList.pending]: (state) => {
+            state.status = 'pending'
+            state.error = null
+        },
+        [getMovieList.fulfilled]: (state, action) => {
+            state.status = 'fulfilled'
+            state.movieList = action.payload
+        },
+        [getMovieList.rejected]: (state, action) => {
+            state.status = 'rejected'
+            state.error = action.payload
+        },
 
     }
-
-
-});
+    });
 
 const movieReducer = moviesSlice.reducer;
-export const {setMovieList,setGenre} = moviesSlice.actions
+export const {setGenre, setPage} = moviesSlice.actions
 export default movieReducer;

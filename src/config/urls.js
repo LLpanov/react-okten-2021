@@ -5,8 +5,8 @@ const headers = {
 const urls = {
 
     movie: '/discover/movie',
-    movieDetail:'/movie',
-    genre: '/genre/movie/list'
+    genre: '/genre/movie/list',
+
 
 
 
