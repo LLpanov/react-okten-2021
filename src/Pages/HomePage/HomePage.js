@@ -35,6 +35,10 @@ const HomePage = () => {
         else dispatch(getPageWithGenre([genre,500]))
     }
 
+    const changeGenreTo = (newGenre = "") => {
+        dispatch(getPageWithGenre([newGenre,1]))
+    }
+
 
 
     return (
@@ -43,7 +47,7 @@ const HomePage = () => {
         <div>
 
             <div className={'Genres'}>
-                {allGenres.map(genre => <div className={'genre-item'} key={genre.id}>{genre.name}</div>)}
+                {allGenres.map(genre => <div onClick={() => changeGenreTo(genre.id)} className={'genre-item'} key={genre.id}>{genre.name}</div>)}
             </div>
 
             <div className={'movie-container'}>
