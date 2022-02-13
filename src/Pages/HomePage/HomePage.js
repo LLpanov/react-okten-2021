@@ -1,40 +1,62 @@
 import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch, useSelector} from 'react-redux';
 
-import {getMovieList} from "../../store";
-import {MovieList} from "../../components";
+import {getGenre} from '../../store';
 import './Loading.scss'
 import './HomePage.scss'
-
+import {getPageWithGenre} from "../../store/pages.Slice";
+import {MovieList} from "../../components";
 
 const HomePage = () => {
 
-    const {movieList: {results, page, total_page},status,error} = useSelector(state => state['movieList']);
-
+    const {genre:allGenres} = useSelector(state => state['movieList']);
+    const {page: {results, page}, genre} = useSelector(state => state['pageReducer']);
 
     const dispatch = useDispatch();
 
+    useEffect(() => {
+        dispatch(getPageWithGenre(["", 1]))
+    }, [])
 
     useEffect(() => {
-        dispatch(getMovieList())
+
+        dispatch(getGenre())
 
     }, [])
+
+
+    const Next = (p) => {
+        if(p<500) dispatch(getPageWithGenre([genre, p+1]))
+        else dispatch(getPageWithGenre([genre,1]))
+    }
+
+    const Prev = (p) => {
+        if(p>1) dispatch(getPageWithGenre([genre,p-1]))
+        else dispatch(getPageWithGenre([genre,500]))
+    }
+
 
 
     return (
 
 
         <div>
+
+            <div className={'Genres'}>
+                {allGenres.map(genre => <div className={'genre-item'} key={genre.id}>{genre.name}</div>)}
+            </div>
+
             <div className={'movie-container'}>
-                {status === 'pending' && <div className={'loading'}>Loading...</div>}
-                {error && <h4>Back Invalid{error}</h4>}
+                {/*    {status === 'pending' && <div className={'loading'}>Loading...</div>}*/}
+                {/*    {error && <h4>Back Invalid{error}</h4>}*/}
                 {results && results.map(movies => <MovieList key={movies.id} movies={movies}/>)}
             </div>
             <div className={'btn'}>
-                <button>prev</button>
+                <button onClick={() => Prev(page)}>PREV</button>
                 <span>{page}</span>
-                <button>next</button>
+                <button onClick={() => Next(page)}>NEXT</button>
             </div>
+
         </div>
     );
 };

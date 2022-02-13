@@ -3,11 +3,11 @@
 .movie-section {
   display: flex;
   flex-direction: column;
-  row-gap:5px;
+  row-gap:10px;
   justify-content: space-evenly;
-  padding: 40px 0px;
+  padding: 40px 0;
   color: $font-primary;
-  font-weight: 200;
+
 }
 .movie-title  h2{
   font-size: 40px;
@@ -19,4 +19,22 @@
 .movie-plot {
   margin-top: 20px;
   line-height: 1.8rem;
+}
+.movie-some-info{
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.allGenres{
+  display: flex;
+  gap: 10px;
+}
+.genres{
+    border: solid 1px $font-primary;
+  padding: .6rem;
+}
+.genres:hover{
+  cursor: pointer;
+  background: $font-primary;
+  color: $font-secondary;
 }

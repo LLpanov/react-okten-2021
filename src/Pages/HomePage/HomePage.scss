@@ -7,14 +7,72 @@
   grid-gap: 40px;
   margin-top: 20px;
 }
-.btn{
+
+.btn {
   margin-top: 10px;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: 10px;
 }
-span{
+
+.btn span {
   color: $font-primary;
-  cursor:pointer;
+  cursor: pointer;
+  border: 0.1875em solid $font-primary;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+button {
+  background: $primary-color;
+  color: $font-primary;
+  width: 200px;
+  height: 35px;
+  border-color: $font-primary;
+  cursor: pointer;
+  font-size: large;
+
+}
+
+button:hover {
+  background: $font-primary;
+  color: $font-secondary;
+  transition: 0.3ms;
+}
+
+.Genres {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  color: $font-primary;
+  height: 100px;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+
+.genre-item {
+  border: solid 1px $font-primary;
+  height: fit-content;
+  padding: 0.6rem;
+  cursor: pointer;
+  display: inline-block;
+  width: fit-content;
+}
+
+.genre-item:hover {
+ background: $font-primary;
+  color: $font-secondary;
+}
+.genre-item.active{
+  background: $font-primary;
+  color: $font-secondary;
 }

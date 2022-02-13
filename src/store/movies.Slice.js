@@ -3,7 +3,7 @@ import {genreService, movieService, PaginationService} from "../sevices";
 
 const initialState = {
     movieList: [],
-    movieDetail:[],
+    movieDetail: [],
     state: null,
     error: null,
     genre: []
@@ -13,14 +13,12 @@ const initialState = {
 export const getMovieList = createAsyncThunk(
     'movieSlice/getMovieList',
     async (_, {rejectWithValue}) => {
-            const movies = await movieService.getAll()
+        const movies = await movieService.getAll()
         try {
             return movies
-        }
-        catch (e){
+        } catch (e) {
             return rejectWithValue(e.message);
         }
-
 
 
     }
@@ -37,28 +35,29 @@ export const getGenre = createAsyncThunk(
     });
 
 
-export const Pagination = createAsyncThunk(
-    'moviesSlice/Pagination',
-    async (page, {dispatch}) => {
+export const getNewPage = createAsyncThunk(
+    'moviesSlice/getNewPage',
+    async ({page}, {dispatch}) => {
         try {
-            const newPage = await PaginationService.getPage(page)
-            console.log(page);
-            dispatch(setPage(newPage))
+            const data = await PaginationService.getPage(page)
+            console.log(data)
+            dispatch(setPage(data))
+            // console.log(data);
+
 
         } catch (e) {
             console.log(e)
         }
 
     });
-export  const getMovie = createAsyncThunk(
+export const getMovie = createAsyncThunk(
     'moviesSlice/getMovie',
-    async (id,{dispatch})=>{
+    async ({id}, {dispatch}) => {
         try {
             const data = await movieService.getById(id);
             dispatch(setMovieDetails(data))
-        }
-        catch (e) {
-           console.log(e.message)
+        } catch (e) {
+            console.log(e.message)
         }
     }
 )
@@ -69,14 +68,16 @@ const moviesSlice = createSlice({
 
     initialState,
     reducers: {
-        setMovieList: (state, action) => {
-            state.movieList = action.payload.movieList
-        },
         setGenre: (state, action) => {
             state.genre = action.payload.genre
         },
-        setMovieDetails:(state, action) =>{
+        setMovieDetails: (state, action) => {
             state.movieDetail = action.payload
+        },
+        setPage: (state, action) => {
+            state.movieList = action.payload
+            console.log(action.payload)
+
         }
 
 
@@ -96,8 +97,8 @@ const moviesSlice = createSlice({
         },
 
     }
-    });
+});
 
 const movieReducer = moviesSlice.reducer;
-export const {setMovieDetails,setGenre, setPage} = moviesSlice.actions
+export const {setMovieDetails, setGenre, setPage} = moviesSlice.actions
 export default movieReducer;
