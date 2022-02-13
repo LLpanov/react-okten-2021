@@ -1,5 +1,5 @@
-import {axiosService} from "./axios.service";
-import {urls} from "../config";
+import {axiosService} from './axios.service';
+import {urls} from '../config';
 
 
 export const pagesService = {

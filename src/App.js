@@ -1,17 +1,22 @@
 import {Route, Routes} from "react-router-dom";
-
+import useLocalStorage from "use-local-storage";
 import {Layout, MovieDetails} from "./components";
 
 import "./App.scss";
 import {HomePage} from "./Pages";
 
 const App = () => {
+    const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light');
 
+    const switchTheme = () => {
+        const ChaneTheme = theme === 'light' ? 'dark' : 'light';
+        setTheme(ChaneTheme)
+    }
 
     return (
-        <div>
+        <div data-theme={theme}>
             <Routes>
-                <Route path={'/'} element={<Layout/>}>
+                <Route path={'/'} element={<Layout switchTheme={switchTheme} theme={theme}/>}>
                     <Route index element={<HomePage/>}/>
                     <Route path={'movie/:id'} element={<MovieDetails/>}/>
                 </Route>

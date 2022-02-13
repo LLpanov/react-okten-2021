@@ -22,6 +22,9 @@
   .user-image img {
     width: 38px;
     height: 38px;
+    display: flex;
+    column-gap: 150px;
+    align-items: center;
   }
 
  a :hover{

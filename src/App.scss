@@ -14,6 +14,8 @@ a {
 
 body {
   background: $primary-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
 }
 
@@ -22,3 +24,23 @@ body {
 
 
 }
+:root {
+  --background: white;
+  --background-secondary: #e7e7e7;
+  --text-primary: black;
+  --text-secondary: white;
+  --accent: purple;
+}
+[data-theme='dark'] {
+  --background: black;
+  --background-secondary: #212121;
+  --text-primary: white;
+  --text-secondary: black;
+  --accent: darkred;
+}
+
+.theme-toggle i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+

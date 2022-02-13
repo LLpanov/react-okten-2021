@@ -1,7 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import './MovieList.scss'
-import {Link} from "react-router-dom";
 
 const MovieList = ({movies: {id, original_title, release_date, vote_average, vote_count, poster_path}}) => {
     return (
