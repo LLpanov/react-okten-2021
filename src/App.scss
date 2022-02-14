@@ -1,11 +1,10 @@
 @import "../src/styles/color";
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -13,34 +12,101 @@ a {
 }
 
 body {
-  background: $primary-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 .container {
   margin: 0 40px;
-
-
 }
+
 :root {
   --background: white;
-  --background-secondary: #e7e7e7;
-  --text-primary: black;
-  --text-secondary: white;
-  --accent: purple;
 }
+
 [data-theme='dark'] {
-  --background: black;
-  --background-secondary: #212121;
-  --text-primary: white;
-  --text-secondary: black;
-  --accent: darkred;
+  background-color: $primary-color;
+  color: white;
 }
 
-.theme-toggle i {
-  font-size: 2rem;
-  cursor: pointer;
+@media screen and (max-width: 1100px) {
+  .container {
+    margin: 0;
+
+    .movie-some-info {
+      padding: 10px 0;
+    }
+
+    .allGenres {
+      padding-left: 15px;
+    }
+
+    .movie-section {
+      .movie-description {
+        padding: 0 15px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .Genres {
+    height: auto;
+  }
+  .movie-container {
+    padding-top: 3rem;
+  }
 }
 
+@media screen and (max-width: 467px) {
+  .container {
+    margin: 0;
+
+    .allGenres {
+      flex-wrap: wrap;
+    }
+
+    .movie-description {
+      text-align: justify;
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+
+    & .card-item {
+      width: 80vw;
+
+      & img {
+        width: 100%;
+        transform: scale(0.95);
+        height: inherit;
+      }
+    }
+
+    & .btn {
+      margin: 30px 0;
+
+      & button {
+        padding: 3px 6px;
+      }
+    }
+  }
+  .header {
+    padding: 0 15px !important;
+  }
+  .Genres {
+    height: auto;
+
+    .movie-container {
+      padding-top: 0 !important;
+    }
+
+    display: flex;
+    width: 100vw;
+    gap: 5px !important;
+    padding: 10px 5px;
+  }
+
+}

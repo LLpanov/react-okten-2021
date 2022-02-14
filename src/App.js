@@ -9,8 +9,8 @@ const App = () => {
     const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light');
 
     const switchTheme = () => {
-        const ChaneTheme = theme === 'light' ? 'dark' : 'light';
-        setTheme(ChaneTheme)
+        const ChangeTheme = theme === 'light' ? 'dark' : 'light';
+        setTheme(ChangeTheme)
     }
 
     return (

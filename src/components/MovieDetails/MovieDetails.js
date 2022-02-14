@@ -23,7 +23,7 @@ const MovieDetails = () => {
             {status === 'pending' && <div className={'loading'}>Loading...</div>}
             {error && <h4 style={{color:'red'}}>Back Invalid: {error}</h4>}
             <div className={'allGenres'}>{genres && genres.map(genres => <div className={'genres'} key={genres.id}>{genres.name}</div>)}</div>
-            <div>
+            <div className={'movie-description'}>
                 <div className={'movie-title'}><h2>{original_title} <span>{vote_average} / 10</span></h2></div>
                 <div className={'movie-plot'}><p>{overview}</p></div>
                 <div className={'movie-some-info'}><p>Budget: $ {budget} million</p>

@@ -10,8 +10,7 @@
 }
 
 .btn {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,9 +18,9 @@
 }
 
 .btn span {
-  color: $font-primary;
+  //color: $font-primary;
   cursor: pointer;
-  border: 0.1875em solid $font-primary;
+  border: 0.1875em solid;
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -35,26 +34,27 @@
 button {
   background: $primary-color;
   color: $font-primary;
-  width: 200px;
-  height: 35px;
-  border-color: $font-primary;
+  padding: 5px 60px;
+  border: 1px solid;
+  //border-color: $font-primary;
   cursor: pointer;
   font-size: large;
-
+  transition: all ease 0.3s;
 }
 
 button:hover {
   background: $font-primary;
   color: $font-secondary;
-  transition: 0.3ms;
+  box-shadow: 0 0 8px #79b8f3,
+  0 0 8px #79b8f3,
+  0 0 8px #79b8f3;
 }
 
 .Genres {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
-  color: $font-primary;
-  height: 100px;
+  min-height: 100px;
   gap: 20px;
   flex-wrap: wrap;
   width: fit-content;
@@ -62,19 +62,22 @@ button:hover {
 }
 
 .genre-item {
-  border: solid 1px $font-primary;
+  border: solid 1px;
   height: fit-content;
   padding: 0.6rem;
   cursor: pointer;
   display: inline-block;
   width: fit-content;
+
+  &:hover {
+    background: $font-primary;
+    color: $font-secondary;
+  }
+
+  //&.active {
+  //  background: $font-secondary;
+  //  color: $font-primary; не работает нет обработчика
+  //}
 }
 
-.genre-item:hover {
- background: $font-primary;
-  color: $font-secondary;
-}
-.genre-item.active{
-  background: $font-primary;
-  color: $font-secondary;
-}
+

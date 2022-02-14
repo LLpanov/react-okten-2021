@@ -3,38 +3,44 @@
 .movie-section {
   display: flex;
   flex-direction: column;
-  row-gap:10px;
+  row-gap: 10px;
   justify-content: space-evenly;
   padding: 40px 0;
-  color: $font-primary;
+  //color: $font-primary;
 
 }
-.movie-title  h2{
-  font-size: 40px;
-  color: $font-primary;
+
+.movie-title {
+  & h2 {
+    font-size: 40px;
+  }
+  & span {
+    color: gold;
+  }
 }
-.movie-title span{
-  color: gold;
-}
+
 .movie-plot {
   margin-top: 20px;
   line-height: 1.8rem;
 }
-.movie-some-info{
+
+.movie-some-info {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
 }
-.allGenres{
+
+.allGenres {
   display: flex;
   gap: 10px;
 }
-.genres{
-    border: solid 1px $font-primary;
+
+.genres {
+  border: solid 1px;
   padding: .6rem;
-}
-.genres:hover{
-  cursor: pointer;
-  background: $font-primary;
-  color: $font-secondary;
+  &:hover {
+    cursor: pointer;
+    background: $font-primary;
+    color: $font-secondary;
+  }
 }
