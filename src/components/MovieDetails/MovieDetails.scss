@@ -1,4 +1,4 @@
-@import "../../styles/color";
+@import '../../styles/color';
 
 .movie-section {
   display: flex;
@@ -6,14 +6,13 @@
   row-gap: 10px;
   justify-content: space-evenly;
   padding: 40px 0;
-  //color: $font-primary;
-
 }
 
 .movie-title {
   & h2 {
     font-size: 40px;
   }
+
   & span {
     color: gold;
   }
@@ -38,6 +37,7 @@
 .genres {
   border: solid 1px;
   padding: .6rem;
+
   &:hover {
     cursor: pointer;
     background: $font-primary;

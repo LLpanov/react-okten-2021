@@ -1,4 +1,5 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
+
 import {pagesService} from '../sevices';
 
 const initialState = {
@@ -33,7 +34,7 @@ const pageSlice = createSlice({
         }
     },
     extraReducers: {
-        [getPageWithGenre.pending]: (state, action) => {
+        [getPageWithGenre.pending]: (state) => {
             state.status = 'pending'
             state.error = null
         },

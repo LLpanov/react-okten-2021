@@ -14,7 +14,7 @@ const HomePage = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getPageWithGenre(["", 1]))
+        dispatch(getPageWithGenre(['', 1]))
     }, [])
 
     useEffect(() => {
@@ -34,7 +34,7 @@ const HomePage = () => {
         else dispatch(getPageWithGenre([genre, 500]))
     }
 
-    const changeGenreTo = (newGenre = "") => {
+    const changeGenreTo = (newGenre = '') => {
         dispatch(getPageWithGenre([newGenre, 1]))
     }
 
